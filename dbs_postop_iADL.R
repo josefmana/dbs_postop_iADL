@@ -1,8 +1,8 @@
 # All analyses reported in the article (Beydicek et al., under review) ran in R version 4.0.5 (2021-03-31),
 # on x86_64-w64-mingw32/x64 (64-bit) platform under Windows 10 x64 (build 19043).
 
-# I used the following versions of packages employed: dplyr_1.0.7, tidyverse_1.3.0, DiagrammeR_1.0.9,
-# DiagrammeRsvg_0.1, rsvg_2.3.1, brms_2.16.3, loo_2.4.1, tidybayes_2.3.1, ggplot2_3.3.3 and  patchwork_1.1.1
+# I used the following versions of packages employed: dplyr_1.0.7, tidyverse_1.3.0,
+# brms_2.16.3, loo_2.4.1, tidybayes_2.3.1, ggplot2_3.3.3 and  patchwork_1.1.1
 
 # set working directory (works only in RStudio)
 setwd( dirname(rstudioapi::getSourceEditorContext()$path) )
@@ -11,10 +11,7 @@ setwd( dirname(rstudioapi::getSourceEditorContext()$path) )
 pkgs <- c(
   "dplyr", # for objects manipulation
   "tidyverse", # for pivot_longer
-  "DiagrammeR", # for DAG creation
-  "DiagrammeRsvg", # for saving plots crated in DiagrammeR
-  "rsvg", # for saving plots crated in DiagrammeR
-  "brms", # for Bayesian model fitting / interface with Stan
+  "brms", # for Bayesian model fitting/interface with Stan
   "tidybayes", # for posteriors manipulations
   "bayestestR", # for calculation of the probability of direction (pd)
   "ggplot2", # for plotting
@@ -72,13 +69,6 @@ d0 <- read.csv( "20220207_dbs_iadl_data_full.csv" , sep = "," ) %>%
 
 # read item descriptions for plotting
 it_desc <- read.csv( "item_nms.csv" , sep = "," , row.names = 1 )
-
-
-# ----------- heuristic causal model (DAG)  -----------
-
-# will be created via DiagrammeR
-# for now, I know I need to adjust for preop. DRS2, BDI-II and LEDD for total effect
-# and adjust for postop. DRS-2, BDI-II and LEDD for direct effect
 
 
 # ----------- data pre-processing  -----------
