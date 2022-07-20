@@ -1,4 +1,4 @@
-# All analyses reported in the article (Beydicek et al., under review) ran in R version 4.0.5 (2021-03-31),
+# All analyses reported in the article (Bezdicek et al., 2022) ran in R version 4.0.5 (2021-03-31),
 # on x86_64-w64-mingw32/x64 (64-bit) platform under Windows 10 x64 (build 19043).
 
 # I used the following versions of packages employed: dplyr_1.0.7, tidyverse_1.3.0,
